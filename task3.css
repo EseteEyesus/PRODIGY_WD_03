@@ -1,0 +1,82 @@
+ body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #1e3c72, #2a5298);
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 120px);
+            grid-gap: 15px;
+            margin-top: 20px;
+        }
+
+        .cell {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(145deg, #3a3a9f, #5a5ad1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .cell:hover {
+            transform: scale(1.1);
+            background: linear-gradient(145deg, #5a5ad1, #7676e5);
+        }
+
+        #status {
+            margin-top: 30px;
+            font-size: 2em;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #4a00e0;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #8e2de2;
+        }
